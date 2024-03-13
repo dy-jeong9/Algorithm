@@ -6,7 +6,7 @@ class Solution {
         
         int pleng = p.length(); //p길이
         int arrleng = t.length() - pleng + 1; //substring 담은 배열의 길이
-        long[] strArr = new long[arrleng]; //substring을 int로 담은 배열
+        long[] strArr = new long[arrleng]; //substring을 long으로 담은 배열
         long pval = Long.parseLong(p);
         
         //t를 p길이만큼 자른 문자열 배열
