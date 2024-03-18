@@ -23,7 +23,7 @@ class Solution {
                 n++;
             }
         }
-        //yellow 인자 배열에서 하나씩 꺼내서 l에 대입하고 brown을 충족하는지 확인한다.
+        //yellow 인수 배열 yel에서 하나씩 꺼내서 l에 대입하고 brown을 충족하는지 확인한다.
         for(int i =0;i<lengYell; i++){
             if(brown == (2*yellow/yel[i] + 2*yel[i] + 4)){
                 l = yel[i];
