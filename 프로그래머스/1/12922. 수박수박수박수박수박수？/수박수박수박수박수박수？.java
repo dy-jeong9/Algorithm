@@ -1,4 +1,5 @@
 import java.util.*;
+
 class Solution {
     public String solution(int n) {
         String answer = "";
@@ -6,8 +7,7 @@ class Solution {
 
         for(int i = 0; i<n; i++){
             
-            if(i%2==0) str[i] = "수";
-            if(i%2==1) str[i] = "박";
+            str[i] = (i%2==0)?  "수" : "박";
 
         }
         answer = String.join("",str);
