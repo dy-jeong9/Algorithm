@@ -1,9 +1,7 @@
 import java.util.*;
 
 public class Solution {
-    public List<Integer> solution(int []arr) {
-        //int[] answer = {};
-        
+    public List<Integer> solution(int []arr) {      
         //arr를 하나씩 stack에 넣는다.
         //직전 값이랑 같으면 제거pop
         Stack<Integer> sInt = new Stack<>();
@@ -20,7 +18,6 @@ public class Solution {
         }
 
         //System.out.println(sInt);
-
         return answer;
     }
 }
