@@ -18,7 +18,7 @@ class Solution {
             } else if(s.charAt(i)==')'){
                 //stack이 비어 있으면 false
                 if(stack.isEmpty()) return false;
-                //비어있지 않으면 = ( 가 있으면 pop
+                //비어있지 않으면 = '(' 가 있으면 -> pop
                 stack.pop();
             }
         }
