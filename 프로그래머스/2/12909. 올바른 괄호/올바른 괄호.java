@@ -8,7 +8,7 @@ class Solution {
         
         Stack<Character> stack = new Stack<>();
         
-        if(s.charAt(0)==')') answer = false;
+        if(s.charAt(0)==')') answer = false; //s의 시작이 ')'이면 무조건 false
         
         for(int i = 0 ; i < s.length() ; i++){
             if(stack.isEmpty()){
@@ -19,6 +19,6 @@ class Solution {
                 stack.push(s.charAt(i));
             }
         }
-        return answer= stack.isEmpty();
+        return answer = stack.isEmpty();
     }
 }
