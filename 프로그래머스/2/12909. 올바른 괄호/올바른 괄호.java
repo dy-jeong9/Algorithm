@@ -1,26 +1,20 @@
-import java.util.*;
-
 class Solution {
     boolean solution(String s) {
         boolean answer = true;
-        //문자열 s를 조건에 따라 하나씩 stack에 넣는다.
-        //'('이면 stack에 push
-        //')'이고 stack이 비었으면 false
-        //')'이고 stack에 값(='(')이 있으면 pop
-        //stack의 empty 여부
+        //stack 없이 풀기
+        //'(' 이면 +1, ')'이면 -1, 
+        //0이하가 되는 순간 false 또는 최종 sum 이 0이 아니면 false
         
-        Stack<Character> stack = new Stack<>();
+        int sum = 0;
         
-        if(s.charAt(0)==')') answer = false; //s의 시작이 ')'이면 무조건 false
-        
-        for(int i = 0 ; i < s.length() ; i++){
-            if(s.charAt(i) == '('){
-                stack.push(s.charAt(i));  
-            } else if (s.charAt(i) == ')'){
-                if(stack.isEmpty()) return false; //'('가 들어간 적 없으면 false
-                stack.pop();
+        for(int i = 0; i < s.length() ; i++){
+            if(s.charAt(i) == '(') sum++;
+            if(s.charAt(i) == ')') sum--;
+            if(sum < 0) {
+                answer = false;
+                break;
             }
         }
-        return answer = stack.isEmpty();
+        return answer = (sum != 0)? false : true ;
     }
 }
