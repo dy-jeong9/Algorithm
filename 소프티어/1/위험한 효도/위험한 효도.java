@@ -10,18 +10,20 @@ public class Main {
         //돌아오는 길에 술래가 앞을 본 시간 = a * m
         //총 시간 = 2d + am + bn
         //a, b가 d보다 큰 경우 n, m 은 0;
+        
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
         int d = sc.nextInt();
         sc.close();
+        
         int t = 0; //걸린 시간
         int n = (d>a)? d / a : 0; //가는 길에 술래가 돌아본 횟수
         int m = (d>b)? d / b : 0; //돌아오는 길에 술래가 돌아본 횟수
 
         t = 2 * d + a * m + b * n;
 
-        //System.out.println(a + "" + b + "" + d);
+        //System.out.println(a + "" + b + "" + d); //scanner 확인 코드
         System.out.print(t);
         
     }
