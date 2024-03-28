@@ -1,4 +1,4 @@
-//https://softeer.ai/practice/6253
+//문제 링크 : https://softeer.ai/practice/6253
 import java.io.*;
 import java.util.*;
 
