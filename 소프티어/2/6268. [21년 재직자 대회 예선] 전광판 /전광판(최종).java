@@ -58,8 +58,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
         int count = 0; //하나의 숫자를 바꾸기 위해 전구 switch 변경 횟수
-        int sum = 0; //각 숫자의 count의 합        
-
+        
         for(int i = 0; i < T; i++){
             int A = sc.nextInt();
             int B = sc.nextInt();
