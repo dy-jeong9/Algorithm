@@ -4,8 +4,8 @@ class Solution {
     public String solution(String[] participant, String[] completion) {
         String answer = "";
         //참가자, 완주자 목록에서 모두 짝수번 등장해야 완주
-        //참가자와 완주자를 순차적으로 map에 먼저 넣고, 등장할 때마다 true, false 업데이트
-        //마지막에 true 값을 갖는 사람(key) 리턴
+        //참가자와 완주자를 순차적으로 map에 먼저 넣고, 등장할 때마다 put, remove
+        //마지막에 남은 사람(key) 리턴
         
         Map<String, Boolean> marathon = new HashMap<>();
         
