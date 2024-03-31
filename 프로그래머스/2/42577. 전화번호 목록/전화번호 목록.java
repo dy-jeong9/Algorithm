@@ -16,7 +16,7 @@ class Solution {
         
         for(String phoneNum : phone_book){
             for(int i = 0; i < phoneNum.length(); i++){
-                if(keyNum.containsKey(phoneNum.substring(0, i))){
+                if(keyNum.containsKey(phoneNum.substring(0, i))){ //keyNum의 key에 phoneNum의 substring 포함 여부 체크
                     answer = false;
                     break;
                 }
