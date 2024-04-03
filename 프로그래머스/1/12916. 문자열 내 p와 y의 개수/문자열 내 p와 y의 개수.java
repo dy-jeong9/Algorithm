@@ -17,7 +17,7 @@ class Solution {
         
         //3. 둘의 값이 다르면 false
         if(countP != countY) answer = false;
-        //3-1. 초기값이 이미 0이지만 추가
+        //3-1. 초기값이 이미 0, answer는 true라 생략 가능
         if(countP + countY == 0) answer = true;
 
         return answer;
