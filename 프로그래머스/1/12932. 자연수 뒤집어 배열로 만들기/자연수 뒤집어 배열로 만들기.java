@@ -1,4 +1,3 @@
-import java.util.*;
 class Solution {
     public long[] solution(long n) {
         //n을 10으로 나눈 나머지를 answer에 하나씩 담는다.
