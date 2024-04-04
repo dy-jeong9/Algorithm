@@ -6,22 +6,22 @@ class Solution {
         //배열을 역순으로 정렬한다.
         //Long타입으로 리턴한다.
         long answer = 0;
-        String N = n + ""; //n의 길이를 사용하기 위해 string 타입으로 변환
-        long[] arrayN = new long[N.length()]; //N을 담을 배열
+        int length = (n == 0)? 1 : (int)Math.log10(n)+1;
+        Long[] arrayN = new Long[length]; //N을 담을 배열
         
-        String s = ""; //string으로 이어붙이기 위한 임시 변수
+        StringBuilder sb = new StringBuilder();
         
-        for(int i = 0 ; i < N.length() ; i++){
+        for(int i = 0 ; i < length ; i++){
             arrayN[i] = n % (long)10;
             n /= 10;
         }
         
-        Arrays.sort(arrayN);
+        Arrays.sort(arrayN, Collections.reverseOrder());
         
-        for(int i = N.length()-1 ; i >= 0 ; i--){
-            s += arrayN[i];
+        for(Long l : arrayN){
+            sb.append(l);
         }
-        answer = Long.parseLong(s);
+        answer = Long.parseLong(sb.toString());
         return answer;
     }
 }
