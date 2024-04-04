@@ -9,18 +9,19 @@ class Solution {
         String N = n + ""; //n의 길이를 사용하기 위해 string 타입으로 변환
         long[] arrayN = new long[N.length()]; //N을 담을 배열
         
-        String k = "";
+        String s = ""; //string으로 이어붙이기 위한 임시 변수
         
         for(int i = 0 ; i < N.length() ; i++){
             arrayN[i] = n % (long)10;
             n /= 10;
         }
+        
         Arrays.sort(arrayN);
         
         for(int i = N.length()-1 ; i >= 0 ; i--){
-            k += arrayN[i];
+            s += arrayN[i];
         }
-        answer = Long.parseLong(k);
+        answer = Long.parseLong(s);
         return answer;
     }
 }
