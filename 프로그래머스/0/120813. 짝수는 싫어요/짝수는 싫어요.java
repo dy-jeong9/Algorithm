@@ -1,11 +1,10 @@
-import java.util.*;
-
 class Solution {
-    public ArrayList solution(int n) {     
+    public int[] solution(int n) {
+        int length = (n%2 == 0) ? n/2 : n/2 +1;
+        int[] answer = new int[length];
         
-        ArrayList<Integer> answer = new ArrayList<>();
-        for(int i = 1; i<=n; i++) {
-            if(i%2 != 0) answer.add(i);
+        for(int i = 0; i<length; i++){
+            answer[i] = i*2 +1;
         }
         
         return answer;
