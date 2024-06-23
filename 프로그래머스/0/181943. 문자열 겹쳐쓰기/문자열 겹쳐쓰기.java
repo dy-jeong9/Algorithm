@@ -8,7 +8,6 @@ class Solution {
               answer += overwrite_string.toCharArray()[i-s];
             }
         }
-       
         return answer;
     }
 }
