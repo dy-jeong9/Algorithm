@@ -1,27 +1,14 @@
 class Solution {
     public String solution(int[] food) {
-        String answer = "";
+        String answer = "0";
         
-        // food의 인자를 하나씩 꺼내서 /2 의 값만큼 answer의 앞에서부터 추가
-        // answer에 0을 추가하고 대칭해서 결과 리턴
-        int i = 0;
-        String ans = ""; // 임시 문자열
-        for(int f : food){
-            if(f/2 > 0){
-                for(int count = 1; count <= f/2; count++){
-                    ans += i;
-                }
-                i++;
-                // System.out.println("f : " + f + " ans : " + ans + " i : " + i);
-            } else {
-                i++;
-            }
-            
+        // food의 높은 인덱스의 인자부터 꺼내서 /2 한 몫의 횟수만큼 0의 양 옆에 추가한다.
+        
+        for(int i = food.length -1; i > 0 ; i--){
+           for(int j = 0 ; j < food[i]/2 ; j++){
+               answer = i + answer + i ;
+           }   
         }
-        StringBuffer ansBuffer = new StringBuffer(ans);
-        String ansReverse = ansBuffer.reverse().toString();
-        
-        answer = ans + "0" + ansReverse;
         
         return answer;
     }
