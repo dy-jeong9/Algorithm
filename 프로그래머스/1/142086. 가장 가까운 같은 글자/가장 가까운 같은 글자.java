@@ -1,28 +1,25 @@
 import java.util.*;
 
 class Solution {
-    public int[] solution(String s) {
-        List<Integer> answer = new ArrayList<>();  // ArrayList로 수정
-        Map<Character, Integer> map = new HashMap<>();  // 문자와 인덱스를 저장할 맵
-
-        char[] sArray = s.toCharArray();
+    public List<Integer> solution(String s) {
+        List<Integer> answer = new ArrayList<>();
         
-        for (int i = 0; i < sArray.length; i++) {
+        // s를 한 글자씩 이전에 등장했는지 확인하고 map에 인덱스와 추가
+        // map에 존재하는 글자라면 더 큰 인덱스를 현재 인덱스에서 빼고 리스트에 추가
+        
+        char[] sArray = s.toCharArray();
+        Map<Character, Integer> map = new HashMap<>();
+        
+        for(int i = 0; i < sArray.length; i++){
             char c = sArray[i];
-            if (!map.containsKey(c)) {
+            if(!map.containsKey(c)){
                 answer.add(-1);
             } else {
-                answer.add(i - map.get(c));  // 현재 인덱스에서 이전 인덱스를 뺀 값을 추가
+                answer.add(i - map.get(c));
             }
-            map.put(c, i);  // 현재 문자의 인덱스를 맵에 저장
+            map.put(c, i);
         }
         
-        // List를 배열로 변환
-        int[] result = new int[answer.size()];
-        for (int i = 0; i < answer.size(); i++) {
-            result[i] = answer.get(i);
-        }
-        
-        return result;
+        return answer;
     }
 }
